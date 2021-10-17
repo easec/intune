@@ -6,6 +6,10 @@ Write-Host "Skapar OU-struktur"
 New-ADOrganizationalUnit -Name "Lomma" -Path "DC=easec,DC=net"
 
 New-ADOrganizationalUnit -Name "Personal" -Path "OU=Lomma,DC=easec,DC=net"
+New-ADOrganizationalUnit -Name "Enheter" -Path "OU=Lomma,DC=easec,DC=net"
+New-ADOrganizationalUnit -Name "Klienter" -Path "OU=enheter,OU=Lomma,DC=easec,DC=net"
+New-ADOrganizationalUnit -Name "Servrar" -Path "OU=enheter,OU=Lomma,DC=easec,DC=net"
+New-ADOrganizationalUnit -Name "Mobila" -Path "OU=enheter,OU=Lomma,DC=easec,DC=net"
 
 Write-Host "Skapar användare Gullan Holm, Karl Hult, Christer Larsson och Majken Larsson"
 Write-Host "Skapar användare Gullan Holm"
